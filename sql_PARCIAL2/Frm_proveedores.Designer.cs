@@ -56,9 +56,6 @@
             this.lbl_IdProveedor = new System.Windows.Forms.Label();
             this.lbl_RegimenP = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.vENTASDataSet = new sql_PARCIAL2.VENTASDataSet();
-            this.pROVEEDORESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pROVEEDORESTableAdapter = new sql_PARCIAL2.VENTASDataSetTableAdapters.PROVEEDORESTableAdapter();
             this.pROIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRONOMBREDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRORFCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,9 +68,13 @@
             this.pROCONTACTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pROTELEFCONTACTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pROREGIMENDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pROVEEDORESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vENTASDataSet = new sql_PARCIAL2.VENTASDataSet();
+            this.pROVEEDORESTableAdapter = new sql_PARCIAL2.VENTASDataSetTableAdapters.PROVEEDORESTableAdapter();
+            this.BTNACTUALIZAR = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROVEEDORESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_RegimenP
@@ -239,7 +240,7 @@
             // 
             // btn_RegistrarP
             // 
-            this.btn_RegistrarP.Location = new System.Drawing.Point(133, 131);
+            this.btn_RegistrarP.Location = new System.Drawing.Point(113, 131);
             this.btn_RegistrarP.Name = "btn_RegistrarP";
             this.btn_RegistrarP.Size = new System.Drawing.Size(93, 23);
             this.btn_RegistrarP.TabIndex = 36;
@@ -311,20 +312,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1250, 124);
             this.dataGridView1.TabIndex = 58;
-            // 
-            // vENTASDataSet
-            // 
-            this.vENTASDataSet.DataSetName = "VENTASDataSet";
-            this.vENTASDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pROVEEDORESBindingSource
-            // 
-            this.pROVEEDORESBindingSource.DataMember = "PROVEEDORES";
-            this.pROVEEDORESBindingSource.DataSource = this.vENTASDataSet;
-            // 
-            // pROVEEDORESTableAdapter
-            // 
-            this.pROVEEDORESTableAdapter.ClearBeforeFill = true;
             // 
             // pROIDDataGridViewTextBoxColumn
             // 
@@ -398,11 +385,36 @@
             this.pROREGIMENDataGridViewTextBoxColumn.HeaderText = "PRO_REGIMEN";
             this.pROREGIMENDataGridViewTextBoxColumn.Name = "pROREGIMENDataGridViewTextBoxColumn";
             // 
+            // pROVEEDORESBindingSource
+            // 
+            this.pROVEEDORESBindingSource.DataMember = "PROVEEDORES";
+            this.pROVEEDORESBindingSource.DataSource = this.vENTASDataSet;
+            // 
+            // vENTASDataSet
+            // 
+            this.vENTASDataSet.DataSetName = "VENTASDataSet";
+            this.vENTASDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pROVEEDORESTableAdapter
+            // 
+            this.pROVEEDORESTableAdapter.ClearBeforeFill = true;
+            // 
+            // BTNACTUALIZAR
+            // 
+            this.BTNACTUALIZAR.Location = new System.Drawing.Point(361, 131);
+            this.BTNACTUALIZAR.Name = "BTNACTUALIZAR";
+            this.BTNACTUALIZAR.Size = new System.Drawing.Size(86, 23);
+            this.BTNACTUALIZAR.TabIndex = 59;
+            this.BTNACTUALIZAR.Text = "ACTUALIZAR";
+            this.BTNACTUALIZAR.UseVisualStyleBackColor = true;
+            this.BTNACTUALIZAR.Click += new System.EventHandler(this.BTNACTUALIZAR_Click);
+            // 
             // Frm_proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 391);
+            this.Controls.Add(this.BTNACTUALIZAR);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lbl_RegimenP);
             this.Controls.Add(this.txt_RegimenP);
@@ -434,8 +446,8 @@
             this.Text = "Frm_proveedores";
             this.Load += new System.EventHandler(this.Frm_proveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROVEEDORESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -485,5 +497,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pROCONTACTODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pROTELEFCONTACTODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pROREGIMENDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button BTNACTUALIZAR;
     }
 }

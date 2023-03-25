@@ -16,7 +16,7 @@ namespace sql_PARCIAL2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_clientes());
+            Application.Run(new Frm_proveedores());
         }
     }
 }

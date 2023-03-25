@@ -45,7 +45,6 @@
             this.lbl_StockMax = new System.Windows.Forms.Label();
             this.txt_IdTp = new System.Windows.Forms.TextBox();
             this.lbl_IdTp = new System.Windows.Forms.Label();
-            this.btn_ActualizarIdTp = new System.Windows.Forms.Button();
             this.btn_RegistrarIdTp = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pRIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +58,7 @@
             this.pRODUCTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vENTASDataSet3 = new sql_PARCIAL2.VENTASDataSet3();
             this.pRODUCTOSTableAdapter = new sql_PARCIAL2.VENTASDataSet3TableAdapters.PRODUCTOSTableAdapter();
+            this.btnACTUALIZAR = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet3)).BeginInit();
@@ -192,16 +192,6 @@
             this.lbl_IdTp.TabIndex = 80;
             this.lbl_IdTp.Text = "Id Tipo";
             // 
-            // btn_ActualizarIdTp
-            // 
-            this.btn_ActualizarIdTp.Location = new System.Drawing.Point(437, 94);
-            this.btn_ActualizarIdTp.Name = "btn_ActualizarIdTp";
-            this.btn_ActualizarIdTp.Size = new System.Drawing.Size(75, 23);
-            this.btn_ActualizarIdTp.TabIndex = 83;
-            this.btn_ActualizarIdTp.Text = "ELIMINAR";
-            this.btn_ActualizarIdTp.UseVisualStyleBackColor = true;
-            this.btn_ActualizarIdTp.Click += new System.EventHandler(this.btn_ActualizarIdTp_Click);
-            // 
             // btn_RegistrarIdTp
             // 
             this.btn_RegistrarIdTp.Location = new System.Drawing.Point(338, 94);
@@ -293,13 +283,23 @@
             // 
             this.pRODUCTOSTableAdapter.ClearBeforeFill = true;
             // 
+            // btnACTUALIZAR
+            // 
+            this.btnACTUALIZAR.Location = new System.Drawing.Point(447, 94);
+            this.btnACTUALIZAR.Name = "btnACTUALIZAR";
+            this.btnACTUALIZAR.Size = new System.Drawing.Size(75, 23);
+            this.btnACTUALIZAR.TabIndex = 86;
+            this.btnACTUALIZAR.Text = "Actualizar";
+            this.btnACTUALIZAR.UseVisualStyleBackColor = true;
+            this.btnACTUALIZAR.Click += new System.EventHandler(this.btnACTUALIZAR_Click);
+            // 
             // Frm_productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 362);
+            this.Controls.Add(this.btnACTUALIZAR);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btn_ActualizarIdTp);
             this.Controls.Add(this.btn_RegistrarIdTp);
             this.Controls.Add(this.txt_IdTp);
             this.Controls.Add(this.lbl_IdTp);
@@ -346,7 +346,6 @@
         private System.Windows.Forms.Label lbl_StockMax;
         private System.Windows.Forms.TextBox txt_IdTp;
         private System.Windows.Forms.Label lbl_IdTp;
-        private System.Windows.Forms.Button btn_ActualizarIdTp;
         private System.Windows.Forms.Button btn_RegistrarIdTp;
         private System.Windows.Forms.DataGridView dataGridView1;
         private VENTASDataSet3 vENTASDataSet3;
@@ -360,5 +359,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pRIDTPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pRPRECIODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pRIVADataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnACTUALIZAR;
     }
 }

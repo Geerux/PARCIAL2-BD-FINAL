@@ -34,7 +34,6 @@
             this.TXTUNIDAD = new System.Windows.Forms.TextBox();
             this.TXTDESCRIPCION = new System.Windows.Forms.TextBox();
             this.BTNREGISTRAR = new System.Windows.Forms.Button();
-            this.BTNELIMINAR = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.uNIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uNDESCRIPCIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,16 +87,6 @@
             this.BTNREGISTRAR.UseVisualStyleBackColor = true;
             this.BTNREGISTRAR.Click += new System.EventHandler(this.BTNREGISTRAR_Click);
             // 
-            // BTNELIMINAR
-            // 
-            this.BTNELIMINAR.Location = new System.Drawing.Point(285, 167);
-            this.BTNELIMINAR.Name = "BTNELIMINAR";
-            this.BTNELIMINAR.Size = new System.Drawing.Size(75, 23);
-            this.BTNELIMINAR.TabIndex = 6;
-            this.BTNELIMINAR.Text = "Eliminar";
-            this.BTNELIMINAR.UseVisualStyleBackColor = true;
-            this.BTNELIMINAR.Click += new System.EventHandler(this.BTNELIMINAR_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -143,7 +132,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.BTNELIMINAR);
             this.Controls.Add(this.BTNREGISTRAR);
             this.Controls.Add(this.TXTDESCRIPCION);
             this.Controls.Add(this.TXTUNIDAD);
@@ -167,7 +155,6 @@
         private System.Windows.Forms.TextBox TXTUNIDAD;
         private System.Windows.Forms.TextBox TXTDESCRIPCION;
         private System.Windows.Forms.Button BTNREGISTRAR;
-        private System.Windows.Forms.Button BTNELIMINAR;
         private System.Windows.Forms.DataGridView dataGridView1;
         private VENTASDataSet4 vENTASDataSet4;
         private System.Windows.Forms.BindingSource uNIDADBindingSource;

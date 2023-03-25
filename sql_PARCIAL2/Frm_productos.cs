@@ -25,7 +25,7 @@ namespace sql_PARCIAL2
 
         }
 
-        private void guardar_actualizar()
+        private void guardar()
         {
             SqlConnection conn = new SqlConnection(Conexion.conectar());
             SqlCommand cmd = new SqlCommand("", conn);
@@ -62,15 +62,23 @@ namespace sql_PARCIAL2
 
         }
 
-        private void eliminar()
+        private void actualizar()
         {
             SqlConnection conn = new SqlConnection(Conexion.conectar());
             SqlCommand cmd = new SqlCommand("", conn);
+
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "SP_PRODUCTO";
             cmd.Parameters.AddWithValue("@OP", 2);
             cmd.Parameters.AddWithValue("@PR_ID", txt_IdCliente.Text);
-            MessageBox.Show("Se borraron los datos correctamente");
+            cmd.Parameters.AddWithValue("@PR_NOMBRE", txt_NomCliente.Text);
+            cmd.Parameters.AddWithValue("@PR_ID_UNIDAD", txt_UnidadPdto.Text);
+            cmd.Parameters.AddWithValue("@PR_STOCK_MIN", txt_StockMin.Text);
+            cmd.Parameters.AddWithValue("@PR_STOCK_MAX", txt_StockMax.Text);
+            cmd.Parameters.AddWithValue("@PR_ID_TP", txt_IdTp.Text);
+            cmd.Parameters.AddWithValue("@PR_PRECIO", txt_PrecioPdto.Text);
+            cmd.Parameters.AddWithValue("@PR_IVA", txt_IvaCD.Text);
+            MessageBox.Show("Sus datos se actualizaron correctamente");
 
 
             try
@@ -81,7 +89,7 @@ namespace sql_PARCIAL2
 
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudieron guardar los datos correctamente: " + ex);
+                MessageBox.Show("No se pudieron actualizar los datos correctamente: " + ex);
             }
 
             finally
@@ -90,14 +98,26 @@ namespace sql_PARCIAL2
             }
         }
 
+       
+
         private void btn_RegistrarIdTp_Click(object sender, EventArgs e)
         {
-            guardar_actualizar();
+            guardar();
         }
 
         private void btn_ActualizarIdTp_Click(object sender, EventArgs e)
         {
-            eliminar();
+            
+        }
+
+        private void btnELIMINAR_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnACTUALIZAR_Click(object sender, EventArgs e)
+        {
+            actualizar();
         }
     }
 }

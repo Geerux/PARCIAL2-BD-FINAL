@@ -53,36 +53,13 @@ namespace sql_PARCIAL2
                 conn.Close();
             }
 
+
+            
+            
         }
 
-        private void eliminar()
-        {
-            SqlConnection conn = new SqlConnection(Conexion.conectar());
-            SqlCommand cmd = new SqlCommand("", conn);
-
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "SP_UNIDAD";
-            cmd.Parameters.AddWithValue("@OP", 2);
-            cmd.Parameters.AddWithValue("UN_ID",TXTUNIDAD.Text);
-            MessageBox.Show("Los datos se borraron");
-
-
-            try
-            {
-                conn.Open();
-                cmd.ExecuteNonQuery();
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se pudieron guardar los datos correctamente: " + ex);
-            }
-
-            finally
-            {
-                conn.Close();
-            }
-        }
+       
+        
 
         private void BTNREGISTRAR_Click(object sender, EventArgs e)
         {
@@ -91,7 +68,7 @@ namespace sql_PARCIAL2
 
         private void BTNELIMINAR_Click(object sender, EventArgs e)
         {
-            eliminar();
+            
         }
     }
 }
