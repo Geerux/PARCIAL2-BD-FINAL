@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM_ALMACENES.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,18 @@
     <Compile Include="Frm_proveedores.Designer.cs">
       <DependentUpon>Frm_proveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Reporte.Designer.cs">
+      <DependentUpon>Frm_Reporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ReporteMasivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ReporteMasivo.Designer.cs">
+      <DependentUpon>Frm_ReporteMasivo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_unidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +113,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VENTASDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VENTASDataSet1.cs">
+      <DependentUpon>VENTASDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="VENTASDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -116,6 +137,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VENTASDataSet4.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRM_ALMACENES.resx">
       <DependentUpon>FRM_ALMACENES.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,8 +155,17 @@
     <EmbeddedResource Include="Frm_proveedores.resx">
       <DependentUpon>Frm_proveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Reporte.resx">
+      <DependentUpon>Frm_Reporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ReporteMasivo.resx">
+      <DependentUpon>Frm_ReporteMasivo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_unidad.resx">
       <DependentUpon>Frm_unidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_venta_D.resx">
+      <DependentUpon>Frm_venta_D.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

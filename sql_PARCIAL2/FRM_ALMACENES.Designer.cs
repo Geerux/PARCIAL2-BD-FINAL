@@ -136,6 +136,7 @@
             // 
             this.vENTASDataSetBindingSource.DataSource = this.vENTASDataSet;
             this.vENTASDataSetBindingSource.Position = 0;
+            this.vENTASDataSetBindingSource.CurrentChanged += new System.EventHandler(this.vENTASDataSetBindingSource_CurrentChanged);
             // 
             // aLMACENESTableAdapter
             // 

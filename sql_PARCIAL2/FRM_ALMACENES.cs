@@ -93,5 +93,10 @@ namespace sql_PARCIAL2
         {
             actualizar();
         }
+
+        private void vENTASDataSetBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

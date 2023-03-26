@@ -11,7 +11,7 @@ namespace sql_PARCIAL2
     {
         public static string conectar()
         {
-            string conn = @"DATA SOURCE=DESKTOP-OL7M306; Initial Catalog=VENTAS ;Integrated Security=True ";
+            string conn = @"DATA SOURCE=GEERUX\SQLEXPRESS; Initial Catalog=VENTAS ;Integrated Security=True ";
             return conn;
         }
     }

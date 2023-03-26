@@ -32,5 +32,15 @@ namespace sql_PARCIAL2.Properties {
                 return ((string)(this["VENTASConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=GEERUX\\SQLEXPRESS;Initial Catalog=VENTAS;Integrated Security=True")]
+        public string CONNVENTASGEERUX {
+            get {
+                return ((string)(this["CONNVENTASGEERUX"]));
+            }
+        }
     }
 }
