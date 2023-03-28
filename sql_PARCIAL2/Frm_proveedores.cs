@@ -77,6 +77,7 @@ namespace sql_PARCIAL2
             SqlConnection conn = new SqlConnection(Conexion.conectar());
             SqlCommand cmd = new SqlCommand("", conn);
 
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "SP_PROVEEDORES";
             cmd.Parameters.AddWithValue("@OP", 2);
             cmd.Parameters.AddWithValue("@PRO_ID", txt_IdProveedor.Text);

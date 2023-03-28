@@ -40,6 +40,7 @@
             this.uNIDADBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vENTASDataSet4 = new sql_PARCIAL2.VENTASDataSet4();
             this.uNIDADTableAdapter = new sql_PARCIAL2.VENTASDataSet4TableAdapters.UNIDADTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uNIDADBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet4)).BeginInit();
@@ -126,11 +127,22 @@
             // 
             this.uNIDADTableAdapter.ClearBeforeFill = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(352, 167);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Actualizar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Frm_unidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BTNREGISTRAR);
             this.Controls.Add(this.TXTDESCRIPCION);
@@ -161,5 +173,6 @@
         private VENTASDataSet4TableAdapters.UNIDADTableAdapter uNIDADTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn uNIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn uNDESCRIPCIONDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
     }
 }

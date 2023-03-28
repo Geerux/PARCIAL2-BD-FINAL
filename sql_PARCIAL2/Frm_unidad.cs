@@ -25,7 +25,7 @@ namespace sql_PARCIAL2
 
         }
 
-        private void guardar_actualizar()
+        private void guardar()
         {
             SqlConnection conn = new SqlConnection(Conexion.conectar());
             SqlCommand cmd = new SqlCommand("", conn);
@@ -58,17 +58,49 @@ namespace sql_PARCIAL2
             
         }
 
-       
-        
+        private void actualizar()
+        {
+            SqlConnection conn = new SqlConnection(Conexion.conectar());
+            SqlCommand cmd = new SqlCommand("", conn);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SP_UNIDAD";
+            cmd.Parameters.AddWithValue("@OP", 2);
+            cmd.Parameters.AddWithValue("@UN_ID", TXTUNIDAD.Text);
+            cmd.Parameters.AddWithValue("UN_DESCRIPCION", TXTDESCRIPCION.Text);
+            MessageBox.Show("Sus datos se actualizar correctamente");
+
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudieron actualizar los datos correctamente: " + ex);
+            }
+
+            finally
+            {
+                conn.Close();
+            }
+        }
+
 
         private void BTNREGISTRAR_Click(object sender, EventArgs e)
         {
-            guardar_actualizar();
+            guardar();
         }
 
         private void BTNELIMINAR_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            actualizar();
         }
     }
 }

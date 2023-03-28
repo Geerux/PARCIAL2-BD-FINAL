@@ -73,6 +73,7 @@
             this.vENTASDataSet = new sql_PARCIAL2.VENTASDataSet();
             this.vENTASDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cLIENTESTableAdapter = new sql_PARCIAL2.VENTASDataSet2TableAdapters.CLIENTESTableAdapter();
+            this.btnACT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLIENTESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vENTASDataSet2)).BeginInit();
@@ -411,11 +412,22 @@
             // 
             this.cLIENTESTableAdapter.ClearBeforeFill = true;
             // 
+            // btnACT
+            // 
+            this.btnACT.Location = new System.Drawing.Point(667, 53);
+            this.btnACT.Name = "btnACT";
+            this.btnACT.Size = new System.Drawing.Size(75, 23);
+            this.btnACT.TabIndex = 33;
+            this.btnACT.Text = "Actualizar";
+            this.btnACT.UseVisualStyleBackColor = true;
+            this.btnACT.Click += new System.EventHandler(this.btnACT_Click);
+            // 
             // Frm_clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1355, 398);
+            this.Controls.Add(this.btnACT);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txt_RegimenC);
             this.Controls.Add(this.lbl_RegimenC);
@@ -502,5 +514,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cLCONTACTODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cLTELEFCONTACTODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cLREGIMENDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnACT;
     }
 }

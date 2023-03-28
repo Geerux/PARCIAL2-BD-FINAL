@@ -25,7 +25,7 @@ namespace sql_PARCIAL2
 
         }
 
-        private void guardar_actualizar()
+        private void guardar()
         {
             SqlConnection conn = new SqlConnection(Conexion.conectar());
             SqlCommand cmd = new SqlCommand("", conn);
@@ -65,14 +65,58 @@ namespace sql_PARCIAL2
     
         }
 
+        private void actualizar()
+        {
+            SqlConnection conn = new SqlConnection(Conexion.conectar());
+            SqlCommand cmd = new SqlCommand("", conn);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "SP_CLIENTES_PARCIAL";
+            cmd.Parameters.AddWithValue("@OP", 2);
+            cmd.Parameters.AddWithValue("@CL_ID", txt_IdCliente.Text);
+            cmd.Parameters.AddWithValue("@CL_NOMBRE", txt_NomCliente.Text);
+            cmd.Parameters.AddWithValue("@CL_RFC", txt_RfcC.Text);
+            cmd.Parameters.AddWithValue("@CL_CORREO", txt_CorreoC.Text);
+            cmd.Parameters.AddWithValue("@CL_LADA", txt_LadaC.Text);
+            cmd.Parameters.AddWithValue("@CL_TELEFONO", txt_TelefonoC.Text);
+            cmd.Parameters.AddWithValue("@CL_CALLE", txt_CalleC.Text);
+            cmd.Parameters.AddWithValue("@CL_NUMERO_EXT", txt_NumExtC.Text);
+            cmd.Parameters.AddWithValue("@CL_CTABANCARIA", txt_CtaBcaC.Text);
+            cmd.Parameters.AddWithValue("@CL_CONTACTO", txt_ContactoC.Text);
+            cmd.Parameters.AddWithValue("@CL_TELEFONO_CONTACTO", txt_TelContactoC.Text);
+            cmd.Parameters.AddWithValue("@CL_REGIMEN", txt_RegimenC.Text);
+            MessageBox.Show("se pudieron actualizar los datos");
+
+
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudieron guardar los datos: " + ex);
+            }
+
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+
+
         private void eliminar()
         {
             SqlConnection conn = new SqlConnection(Conexion.conectar());
             SqlCommand cmd = new SqlCommand("", conn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "SP_CLIENTES_PARCIAL";
-            cmd.Parameters.AddWithValue("@OP", 2);
+            cmd.Parameters.AddWithValue("@OP", 3);
             cmd.Parameters.AddWithValue("@CL_ID", txt_IdCliente.Text);
+            MessageBox.Show("se eliminaron los datos");
 
 
             try
@@ -94,13 +138,18 @@ namespace sql_PARCIAL2
 
         private void btn_RegistrarC_Click(object sender, EventArgs e)
         {
-            guardar_actualizar();
+            guardar();
         }
 
         private void btn_ActualizarC_Click(object sender, EventArgs e)
         {
             eliminar();
 
+        }
+
+        private void btnACT_Click(object sender, EventArgs e)
+        {
+            actualizar();
         }
     }
 
